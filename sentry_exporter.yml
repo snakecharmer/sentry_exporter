@@ -1,0 +1,8 @@
+modules:
+  sentry:
+    prober: http
+    timeout: 5s
+    http:
+      prefix: https://sentry.com/api/0/projects/{namespace}/
+      headers:
+        Authorization: Bearer {Token}
