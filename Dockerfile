@@ -1,6 +1,6 @@
-FROM        quay.io/prometheus/busybox:latest
+FROM quay.io/prometheus/busybox:latest
 
-COPY sentry_exporter  /bin/sentry_exporter
+COPY sentry_exporter_linux_amd64  /bin/sentry_exporter
 COPY sentry.yml       /etc/sentry_exporter/config.yml
 
 EXPOSE      9412
