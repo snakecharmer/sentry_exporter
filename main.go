@@ -37,7 +37,7 @@ type HTTPProbe struct {
 	// Defaults to 2xx.
 	ValidStatusCodes []int             `yaml:"valid_status_codes"`
 	Prefix           string            `yaml:"prefix"`
-	Header           map[string]string `yaml:"headers"`
+	Headers          map[string]string `yaml:"headers"`
 }
 
 var Probers = map[string]func(string, http.ResponseWriter, Module) bool{
