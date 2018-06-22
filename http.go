@@ -43,13 +43,13 @@ func probeHTTP(target string, w http.ResponseWriter, module Module) (success boo
 		return
 	}
 
-  for key, value := range config.Headers {
-    if strings.Title(key) == "Host" {
-      request.Host = value
-      continue
-    }
-    request.Header.Set(key, value)
-  }
+	for key, value := range config.Headers {
+		if strings.Title(key) == "Host" {
+			request.Host = value
+			continue
+		}
+		request.Header.Set(key, value)
+	}
 
 	resp, err := client.Do(request)
 	// Err won't be nil if redirects were turned off. See https://github.com/golang/go/issues/3795
