@@ -1,7 +1,7 @@
-FROM        quay.io/prometheus/busybox:latest
+FROM quay.io/prometheus/busybox:latest
 
 COPY sentry_exporter  /bin/sentry_exporter
-COPY sentry.yml       /etc/sentry_exporter/config.yml
+COPY sentry_exporter.yml       /etc/sentry_exporter/config.yml
 
 EXPOSE      9412
 ENTRYPOINT  [ "/bin/sentry_exporter" ]

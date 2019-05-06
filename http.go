@@ -2,12 +2,12 @@ package main
 
 import (
 	"fmt"
-	"regexp"
 	"io"
 	"io/ioutil"
 	"net/http"
-	"strings"
+	"regexp"
 	"strconv"
+	"strings"
 
 	"github.com/prometheus/common/log"
 )
