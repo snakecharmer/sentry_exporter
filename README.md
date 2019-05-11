@@ -6,11 +6,20 @@ The sentry exporter expose sentry stats to Prometheus.
 
 ### Local Build
 
-    make
-    ./sentry_exporter <flags>
+```
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOBIN
+go install
+go build
+./sentry_exporter <flags>
+```
 
-    or you can use gox
+or you can use gox:
 
+```
+go get github.com/mitchellh/gox
+gox
+```
 
 Visiting [http://localhost:9412/probe?target={sentry_project}](http://localhost:9412/probe?target=google.com)
 will return metrics for a probe against the sentry project
