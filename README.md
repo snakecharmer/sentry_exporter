@@ -1,6 +1,10 @@
 # Sentry exporter
 
-The sentry exporter expose sentry stats to Prometheus.
+An exporter for [Prometheus](https://prometheus.io/) that collects metrics from [Sentry](https://sentry.io).
+
+## Install
+
+You can download prebuilt binaries from [GitHub releases](https://github.com/snakecharmer/sentry_exporter/releases)
 
 ## Building and running
 
