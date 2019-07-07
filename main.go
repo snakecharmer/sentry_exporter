@@ -147,7 +147,7 @@ func main() {
 		}
 	}()
 
-	http.Handle("/metrics", prometheus.Handler())
+	http.Handle("/metrics", promhttp.Handler())
 	http.HandleFunc("/probe",
 		func(w http.ResponseWriter, r *http.Request) {
 			sc.RLock()
