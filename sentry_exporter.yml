@@ -3,6 +3,6 @@ modules:
     prober: http
     timeout: 5s
     http:
-      prefix: https://sentry.io/api/0/projects/
+      prefix: https://sentry.io/api/0/projects/{organization_slug}
       headers:
         Authorization: Bearer {Token}
